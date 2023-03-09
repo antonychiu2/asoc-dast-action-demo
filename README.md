@@ -12,6 +12,7 @@ AltoroJ was created in 2008 and has gone through a number of iterations since th
 # Binaries and hosted versions
 If you'd like to try AltoroJ but want to skip all of the cool software development stuff, use publicly hosted version, available at http://altoromutual.com:8080/ . You will not be able to enable any of the advanced options and this site may not always be available, but it's the easiest way to get started
 
+test
 
 # Prereqiusites
 AltoroJ has been developed using Eclipse and designed to run on Tomcat 7, but since it's a relatively simple J2EE app, it should be pretty easy to port it to a different J2EE IDE or another J2EE web application server. Here are out-of-the-box requirements:
