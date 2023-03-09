@@ -34,7 +34,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          
+           
       - uses: antonychiu2/asoc-dast-action@latest
         with:
           baseurl:  https://cloud.appscan.com/api/V2
