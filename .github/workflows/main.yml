@@ -35,11 +35,11 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
            
-      - uses: antonychiu2/asoc-dast-action@v1.3
+      - uses: antonychiu2/asoc-dast-action@v1.4
         with:
           baseurl:  https://cloud.appscan.com/api/V2
           asoc_key: ${{secrets.ASOC_KEY}}
           asoc_secret: ${{secrets.ASOC_SECRET}}
-          application_id: e35ea96d-cae0-499a-a3ed-7a4efd77b269
+          application_id: acd3ef50-6276-461d-8514-abc6e7113577
           scan_name: 'Scan from Github'
-
+          scan_type: 'staging'
