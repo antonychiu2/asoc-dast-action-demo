@@ -28,7 +28,7 @@ jobs:
       
       #Run ASoC DAST Action
       - name: Run ASoC DAST Scan
-        uses: antonychiu2/asoc-dast-action@v1.26
+        uses: antonychiu2/asoc-dast-action@v1.27
         with:
           baseurl:  https://cloud.appscan.com
           asoc_key: ${{secrets.ASOC_KEY}}
