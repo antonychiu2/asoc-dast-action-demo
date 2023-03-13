@@ -35,7 +35,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
            
-      - uses: antonychiu2/asoc-dast-action@v1.11
+      - uses: antonychiu2/asoc-dast-action@v1.12
         with:
           baseurl:  https://cloud.appscan.com
           asoc_key: ${{secrets.ASOC_KEY}}
@@ -45,3 +45,4 @@ jobs:
           scan_type: 'staging'
           starting_URL: 'https://demo.testfire.net?mode=demo'
           login_method: 'none'
+          fail_for_noncompliance: true
