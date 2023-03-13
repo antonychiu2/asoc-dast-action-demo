@@ -37,5 +37,6 @@ jobs:
           scan_name: 'Scan from Github'
           scan_type: 'staging'
           starting_URL: 'https://demo.testfire.net?mode=demo'
-          login_method: 'none'
+          dynamic_scan_type: upload
+          scan_file: 'altoro2.scant'
           fail_for_noncompliance: false
