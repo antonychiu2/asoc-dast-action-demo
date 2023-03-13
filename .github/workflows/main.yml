@@ -32,7 +32,7 @@ jobs:
         with:
           baseurl:  https://cloud.appscan.com
           asoc_key: ${{secrets.ASOC_KEY}}
-          asoc_secret: ${{secrets.ASOC_SECRET}}
+          asoc_secret: testwrongsecret
           application_id: acd3ef50-6276-461d-8514-abc6e7113577
           scan_name: 'Scan from Github'
           scan_type: 'staging'
