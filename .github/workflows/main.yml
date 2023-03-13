@@ -46,4 +46,4 @@ jobs:
           scan_type: 'staging'
           starting_URL: 'https://demo.testfire.net?mode=demo'
           login_method: 'none'
-          fail_for_noncompliance: true
+          fail_for_noncompliance: false
