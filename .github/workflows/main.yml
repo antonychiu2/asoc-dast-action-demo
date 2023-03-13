@@ -40,3 +40,4 @@ jobs:
           network: private
           presence_id: f185efda-67bf-ed11-ba76-14cb65723612
           fail_for_noncompliance: false
+          wait_for_analysis: false
