@@ -15,9 +15,10 @@ jobs:
           asoc_secret: ${{secrets.ASOC_SECRET}}
           application_id: acd3ef50-6276-461d-8514-abc6e7113577
           scan_type: 'staging'
-          dynamic_scan_type: upload
-          scan_or_scant_file: '${{github.workspace}}/altoro.scant'
-          network: private
-          presence_id: f185efda-67bf-ed11-ba76-14cb65723612
+          dynamic_scan_type: dast
+          starting_URL: 'https://demo.testfire.net?mode=demo'
+          login_user: jsmith
+          login_pass: demo1234
+          network: public
           fail_for_noncompliance: false
           wait_for_analysis: true
