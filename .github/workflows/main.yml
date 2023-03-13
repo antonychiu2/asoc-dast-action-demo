@@ -35,7 +35,8 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
            
-      - uses: antonychiu2/asoc-dast-action@v1.14
+      - name: Run ASoC DAST Scan
+        uses: antonychiu2/asoc-dast-action@v1.15
         with:
           baseurl:  https://cloud.appscan.com
           asoc_key: ${{secrets.ASOC_KEY}}
