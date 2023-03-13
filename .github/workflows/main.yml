@@ -1,43 +1,23 @@
-# This is a basic workflow to help you get started with Actions
-
-name: CI
-
-# Controls when the workflow will run
+name: "HCL AppScan DAST"
 on:
-  # Triggers the workflow on push or pull request events but only for the "Altoro-3.4" branch
-  push:
-    branches: [ "Altoro-3.4" ]
-  pull_request:
-    branches: [ "Altoro-3.4" ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+  workflow_dispatch
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  scan:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-
-      
-      #Run ASoC DAST Action
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Run ASoC DAST Scan
-        uses: antonychiu2/asoc-dast-action@v1.27
+        uses: antonychiu2/asoc-dast-action@v1.0.0
         with:
           baseurl:  https://cloud.appscan.com
           asoc_key: ${{secrets.ASOC_KEY}}
           asoc_secret: ${{secrets.ASOC_SECRET}}
           application_id: acd3ef50-6276-461d-8514-abc6e7113577
           scan_type: 'staging'
-          dynamic_scan_type: dast
-          starting_URL: 'https://demo.testfire.net?mode=demo'
+          dynamic_scan_type: upload
+          scan_or_scant_file: 'altoro.scant'
           network: private
           presence_id: f185efda-67bf-ed11-ba76-14cb65723612
           fail_for_noncompliance: false
-          wait_for_analysis: false
+          wait_for_analysis: true
