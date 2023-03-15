@@ -1,6 +1,6 @@
 name: "HCL AppScan DAST"
 on:
-  workflow_dispatch
+  push
 jobs:
   scan:
     runs-on: ubuntu-latest
@@ -8,7 +8,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Run ASoC DAST Scan
-        uses: antonychiu2/asoc-dast-action@v1.0.1
+        uses: antonychiu2/asoc-dast-action@v0.0.3.1
         with:
           baseurl:  https://cloud.appscan.com
           asoc_key: ${{secrets.ASOC_KEY}}
@@ -22,3 +22,4 @@ jobs:
           network: public
           fail_for_noncompliance: false
           wait_for_analysis: true
+          wait_for_analysis_timeout_minutes: 60
