@@ -23,3 +23,7 @@ jobs:
           fail_for_noncompliance: false
           wait_for_analysis: true
           wait_for_analysis_timeout_minutes: 60
+      - name: Cancel test
+        run: |
+          Write-Host "This is a cancel test from the main job yml"
+        shell: pwsh
