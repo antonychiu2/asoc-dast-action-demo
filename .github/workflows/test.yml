@@ -3,11 +3,11 @@ on:
   #push
   workflow_dispatch
 jobs:
-  scan:
+  test-job:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Run test nodejs workflow
-        uses: antonychiu2/custom-action-workspace@main
+        uses: antonychiu2/custom-action-workspace@v0.2
   
