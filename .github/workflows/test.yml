@@ -9,5 +9,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Run test nodejs workflow
-        uses: antonychiu2/custom-action-workspace@v0.2
+        uses: antonychiu2/custom-action-workspace@main
   
