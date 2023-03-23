@@ -33,3 +33,4 @@ jobs:
           name: AppScan Security Scan HTML Report 
           path: '**/AppScan*.html'
         if: success() || failure()
+
