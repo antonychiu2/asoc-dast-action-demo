@@ -18,11 +18,12 @@ jobs:
           scan_type: 'staging'
           dynamic_scan_type: dast
           starting_URL: 'https://demo.testfire.net?mode=demo'
+          ephemeral_presence: true
 
           #starting_URL: 'https://demo.testfire.net'
           login_user: jsmith
           login_password: demo1234
-          network: public
+          #network: public
           fail_for_noncompliance: false
           wait_for_analysis: true
           wait_for_analysis_timeout_minutes: 60
