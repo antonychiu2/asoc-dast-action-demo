@@ -1,4 +1,4 @@
-name: "HCL AppScan DAST"
+name: "HCL AppScan DAST Demo 2023-04-04"
 on:
   workflow_dispatch
 jobs:
