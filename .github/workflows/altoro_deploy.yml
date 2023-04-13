@@ -1,11 +1,7 @@
 name: HCL AppScan DAST with Private Site Scanning
 
 on:
-  push:
-    branches: [ "Altoro-3.4" ]
-  pull_request:
-    branches: [ "Altoro-3.4" ]
-
+  workflow_dispatch
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,8 +9,8 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: |
-        docker build --name altoromutual .
-        docker run -p8080:8080 altoromutual
+        docker build -t altoromutual .
+        docker run -p 8080:8080 -d --name altoromutual altoromutual
     - name: Run ASoC DAST Scan
       uses: antonychiu2/asoc-dast-action@v1.0.4
       with:
