@@ -1,17 +1,12 @@
 name: HCL AppScan DAST with Private Site Scanning
 
 on:
-  push
+  workflow_dispatch
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Print Runner Hostname
-      run: |
-        echo "The hostname of the runner is: $HOSTNAME"
-        echo "another hostname: ${{ env.HOSTNAME }}"
-
     - name: Build and run Altoro Docker instance
       run: |
         docker build -t altoromutual .
