@@ -19,7 +19,7 @@ jobs:
         echo "LOCAL_STARTING_URL=http://$HOSTNAME:8080/altoromutual" >> $GITHUB_ENV
         
     - name: Run ASoC DAST Scan
-      uses: antonychiu2/asoc-dast-action@debug-startingURL
+      uses: antonychiu2/asoc-dast-action@v1.0.4
       with:
         baseurl:  https://cloud.appscan.com
         asoc_key: ${{secrets.ASOC_KEY}}
