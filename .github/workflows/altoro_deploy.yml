@@ -23,7 +23,7 @@ jobs:
         scan_type: 'staging'
         dynamic_scan_type: dast
         starting_URL: "${{ env.LOCAL_STARTING_URL }}"
-        login_method: userpass
+        login_method: none
         login_user: jsmith
         login_password: demo1234
         ephemeral_presence: true
