@@ -14,10 +14,12 @@ jobs:
 
     - name: Build and run Altoro Docker instance
       run: |
-        docker build -t altoromutual .
-        docker run -p 8080:8080 -d --name altoromutual altoromutual
-        export startingURL=http://$HOSTNAME:8080/altoromutual
+        #docker build -t altoromutual .
+        #docker run -p 8080:8080 -d --name altoromutual altoromutual
+        #STARTING_URL=http://$HOSTNAME:8080/altoromutual
+        echo "LOCAL_STARTING_URL=http://$HOSTNAME:8080/altoromutual" >> $GITHUB_ENV
         env
+        
     - name: Run ASoC DAST Scan
       uses: antonychiu2/asoc-dast-action@debug-startingURL
       with:
@@ -27,7 +29,7 @@ jobs:
         application_id: acd3ef50-6276-461d-8514-abc6e7113577
         scan_type: 'staging'
         dynamic_scan_type: dast
-        starting_URL: "${{ env.startingURL }}"
+        starting_URL: "${{ env.LOCAL_STARTING_URL }}"
         login_method: userpass
         login_user: jsmith
         login_password: demo1234
