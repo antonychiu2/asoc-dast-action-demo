@@ -1,4 +1,4 @@
-name: "HCL AppScan DAST"
+name: "HCL AppScan DAST demo-2023-4-13.yml"
 on:
   workflow_dispatch
 jobs:
