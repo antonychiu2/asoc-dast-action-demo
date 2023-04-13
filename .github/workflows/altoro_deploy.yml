@@ -12,14 +12,14 @@ jobs:
         echo "The hostname of the runner is: $HOSTNAME"
         echo "another hostname: ${{ env.HOSTNAME }}"
 
-    - name: Build the Docker image
+    - name: Build and run Altoro Docker instance
       run: |
         docker build -t altoromutual .
         docker run -p 8080:8080 -d --name altoromutual altoromutual
         export startingURL=http://$HOSTNAME:8080/altoromutual
         env
     - name: Run ASoC DAST Scan
-      uses: antonychiu2/asoc-dast-action@v1.0.4
+      uses: antonychiu2/asoc-dast-action@debug-startingURL
       with:
         baseurl:  https://cloud.appscan.com
         asoc_key: ${{secrets.ASOC_KEY}}
