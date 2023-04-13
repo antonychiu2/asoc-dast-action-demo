@@ -7,6 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+    - name: Print Runner Hostname
+      run: |
+        echo "The hostname of the runner is: ${{ env.RUNNER_HOSTNAME }}"
+
     - name: Build the Docker image
       run: |
         docker build -t altoromutual .
