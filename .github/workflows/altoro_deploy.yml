@@ -12,7 +12,6 @@ jobs:
         docker build -t altoromutual .
         docker run -p 8080:8080 -d --name altoromutual altoromutual
         echo "LOCAL_STARTING_URL=http://$HOSTNAME:8080/altoromutual" >> $GITHUB_ENV
-        steps:
 
     - name: Check site
       run: |
