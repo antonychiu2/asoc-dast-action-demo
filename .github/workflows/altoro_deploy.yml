@@ -18,7 +18,7 @@ jobs:
       run: |
         set -e
         for i in {1..10}; do
-          status=$(curl --write-out %{http_code} --silent --output /dev/null http://localhost:8080/)
+          status=$(curl --write-out %{http_code} --silent --output /dev/null ${{ env.LOCAL_STARTING_URL }})
           if [ $status -eq 200 ]; then
             echo "Site is alive"
             exit 0
