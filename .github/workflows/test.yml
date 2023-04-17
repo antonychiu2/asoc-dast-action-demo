@@ -1,4 +1,4 @@
-name: "HCL AppScan DAST Ephemeral Presence"
+name: "DAST Ephemeral Presence Test 1"
 on:
   workflow_dispatch
 jobs:
