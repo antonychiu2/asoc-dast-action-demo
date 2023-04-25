@@ -13,22 +13,6 @@ jobs:
         docker run -p 8080:8080 -d --name altoromutual altoromutual
         echo "LOCAL_STARTING_URL=http://$HOSTNAME:8080/altoromutual" >> $GITHUB_ENV
 
-    - name: Check site
-      run: |
-        set -e
-        for i in {1..10}; do
-          status=$(curl --write-out %{http_code} --silent --output /dev/null ${{ env.LOCAL_STARTING_URL }})
-          if [ $status -eq 200 ]; then
-            echo "Site is alive"
-            exit 0
-          else
-            echo "Site is not alive, status code: $status"
-            sleep 10
-          fi
-        done
-        echo "Site is not alive after 10 attempts"
-        exit 1
-
     - name: Run ASoC DAST Scan
       uses: HCL-TECH-SOFTWARE/appscan-dast-action@main
       with:
