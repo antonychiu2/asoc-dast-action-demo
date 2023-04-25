@@ -30,7 +30,7 @@ jobs:
         exit 1
 
     - name: Run ASoC DAST Scan
-      uses: antonychiu2/asoc-dast-action@v1.0.4
+      uses: HCL-TECH-SOFTWARE/appscan-dast-action@main
       with:
         baseurl:  https://cloud.appscan.com
         asoc_key: ${{secrets.ASOC_KEY}}
