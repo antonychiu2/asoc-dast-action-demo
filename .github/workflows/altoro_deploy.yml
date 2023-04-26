@@ -1,4 +1,4 @@
-name: HCL AppScan DAST with Private Site Scanning
+name: Altoro Deploy - HCL AppScan DAST with ephemeral
 
 on:
   workflow_dispatch
